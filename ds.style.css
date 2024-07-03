@@ -34,7 +34,9 @@ h1 {
 }
 
 h5 {
-    margin-bottom: 48px;
+    margin-top: 18px;
+    margin-bottom: 28px;
+    text-align: center;
 }
 
 ul {
@@ -72,7 +74,7 @@ b {
     font-family: 'Great Vibes', sans-serif;
     font-size: 56px;
     margin-bottom: 12px;
-    margin-top: 48px;
+    margin-top: 28px;
 }
 
 .button-contained {
@@ -164,6 +166,12 @@ header {
     margin-bottom: 16px;
 }
 
+.header-text-position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .header-buttons {
     display: flex;
     justify-content: center;
@@ -181,10 +189,37 @@ header {
     height: 200px;   
 }
 
+.header-first-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 52px;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+    gap: 20px;    
+}
+
 @media (min-width: 1024px) {
     .header-image {       
         margin-bottom: 4px;
-        max-width: 550px;          
+        max-width: 532px;     
+    }
+
+    .header-first-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-top: 52px;
+        padding-left: 16px;
+        padding-right: 16px;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 88px;        
     }
     
     .header-container {
@@ -193,28 +228,45 @@ header {
         align-items: center;
         gap: 88px;        
     }
+
     .header-title {
         text-align: left;
     }
+
     .header-paragraph {
         text-align: left;
         margin-bottom: 88px;
     }
+
+    .header-text-position {        
+        align-items: start;
+    }
+
     .header-buttons {
         justify-content: start;
     }
+
     .collabor-container {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         gap: 88px;
     }
+
     .section-title {        
         text-align: left;
     }
 
+    .section-title-principal {        
+        margin-top: 48px;
+    }
+
     .section-container {
         padding: 56px;
+    }
+
+    h5 {
+        margin-bottom: 48px;
     }
 }
 
@@ -229,7 +281,8 @@ header {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    margin-bottom:44px;
+    margin-bottom: 44px;
+    margin-top: 44px;
     align-items: center;    
 }
 
@@ -300,7 +353,9 @@ header {
     .about-product-cards {
         gap: 56px;
         flex-direction: row;
-        display: flex;        
+        display: flex;
+        margin-top: 68px;
+        margin-bottom: 0;      
     }
 
     .about-product-card p {
@@ -378,13 +433,26 @@ header {
     .section-container .title-card {
         text-align: left;
     }
+
+    .section-paragraph {
+        margin-bottom: 84px;        
+    }
+
+    .title-card {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-card h4 {        
+        line-height: 32px;    
+    }
 }
 
 .section-paragraph {
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
-    margin-bottom: 84px;
+    margin-bottom: 4px;
     text-align: justify;
 }
 
@@ -411,14 +479,14 @@ header {
     display: flex;
     flex-direction: column;
     z-index: 100;
-    position: relative;    
+    position: relative; 
+
 }
 
 .content-container-card {
-    width: 100%;
-    max-width: 348px;
+    width: 100%;    
     border: 1px solid lightgray;
-    border-radius: 8px;    
+    border-radius: 8px;   
 }
 
 .image-card {
@@ -463,6 +531,7 @@ header {
     font-size: 22px;
     font-weight: 600;
     line-height: 32px;
+    text-align: center;  
 }
 
 .content-card p {
@@ -473,7 +542,6 @@ header {
 }
 
 .title-card {
-    margin-bottom: 44px;
     text-align: center;
 }
 
@@ -689,11 +757,18 @@ header {
 
 /* -- Footer -- */
 
+.section-footer-container {
+    /* padding: 16px; */    
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .footer-logo {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 76px;    
+    align-items: center;    
 }
 
 .footer-social-media-links {
@@ -712,8 +787,9 @@ header {
 
 .ft-text-color {
     color: var(--darkblue);
-    margin-left: 16px;
-    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;    
 }
 
 .ft-logos {
@@ -833,6 +909,21 @@ footer {
     .ft-links-centered {
         display: flex;       
     }
+
+    .nav-section-container {
+        padding: 4px;
+    }
+
+    .footer-logo {
+        flex-direction: row;
+        margin-top: 76px;    
+    }
+
+    .ft-text-color {        
+        margin-left: 16px;
+        font-size: 20px;
+        margin-bottom: 28px;
+    }
 }
 
 /* -- Navbar section -- */
@@ -840,6 +931,14 @@ footer {
 nav {
     background-color: rgb(255, 255, 255);
 }
+
+.nav-section-container {
+    padding: 4px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
 .nav-bar {
     justify-content: center;
     align-items: center;
@@ -854,14 +953,16 @@ nav {
 .nav-row-centered {    
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    margin-top: 16px;
 }
 
 #app-logo {
     height: 40px;
     width: 40px;
-    margin-right: 16px;
-    margin-left: 2px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 18px;
     background-color: rgb(6, 125, 199);    
 }
 
@@ -874,11 +975,13 @@ nav {
 
 #app-title { 
     width: 160px;
+    height: 24px;
     font-family: 'Great Vibes', sans-serif;
     font-size: 32px;
     font-weight: 400;
     color: var(--darkblue);
-    margin-left: 8px;
+    margin-left: 12px;
+    margin-bottom: 8px;
 }
 
 .nav-bar-wrapper {
@@ -981,11 +1084,26 @@ nav {
         height: auto;
         padding: 20px 12px;
     }
+
+    #app-logo {       
+        margin-right: 16px;
+        margin-left: 2px;     
+    }
+
+    .collegium {        
+        margin-top: 8px;
+        margin-bottom: 8px;    
+    }
+
+    .base-footer {
+        height: 12px;
+    }    
 }
 
 .base-footer {
     background-color: black;
     color: var(--white);
+    height: 16px;
     position: absolute;    
     width: 100%;
     text-align: center;
@@ -995,8 +1113,9 @@ nav {
 .collegium {
     width: 224px;
     height: 112px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: 88px;
     cursor: pointer;
 }
 
@@ -1054,19 +1173,19 @@ nav {
 }
 
 .segement-calibration-ind  {
-    margin-top: 100px;
+    margin-top: 0;
 }
 
  .segement-calibration-teen  {
-    margin-top: 68px;
+    margin-top: 0;
 }
 
 .segement-calibration-couple  {
-    margin-top: 88px;
+    margin-top: 0;
 } 
 
 .segement-calibration-mine  { 
-    margin-top: 68px;
+    margin-top: 0;
 }
 
 #tooltip {
@@ -1104,4 +1223,64 @@ nav {
     top: -130%;
     visibility: visible;
     opacity: 1;
+}
+
+/* Mobile menu */
+.mobile-menu-container {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    background-color: white;
+    padding: 16px;
+    box-shadow: -8px 0px 38px -12px rgba(0,0,0,0.75);
+    z-index: 100;
+    transform: translateX(360px);
+    transition-property: transform;
+    transition-duration: 0.25s;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.mobile-first-div {
+    height: 116px;
+    display: flex;
+    flex-direction: column;    
+    padding: 28px;
+    margin-top: 16px;     
+}
+
+.mobile-txt-decoration {
+    color: var(--black);
+    text-align: left;
+    text-decoration: none;    
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 16px;
+}
+
+.mobile-second-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;        
+    cursor: pointer;
+    margin-left: 28px;
+    margin-right: 24px;
+}
+
+.mobile-padd-icon {
+    padding-bottom: 16px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    display: none;
+    cursor: pointer;
 }
